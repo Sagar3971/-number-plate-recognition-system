@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Vehicle</title>
+  <link rel="stylesheet" href="{% static 'search.css' %}">
+</head>
+
+<body>
+    <div class="title">
+        <a href="{% url 'home1' %}" class="sidelagau" style="text-decoration: none;">sidelagau</a>
+        <a href="{% url 'home1' %}" class="com" style="text-decoration: none;">.com</a>
+    </div>
+
+    <div class="form1">    
+        <form action="search" method="POST">
+          {% csrf_token%}
+          <br><br>
+          <p>Input Vehicle Number</p>
+          <input id="box" type="text" placeholder="BA03PA5368" name="search">
+          <br><br>
+          <button id="btnSearch" name="btnSearch"> Search</button>
+        </form> 
+    </div> 
+        {% for message in messages %}
+        <p id="msg"><i>{{message}}</i></p> 
+        {% endfor %}
+        {% for User in users%}
+        {{user.vehcile_number}}
+        {% endfor%}
+</body>
+</html>

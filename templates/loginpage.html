@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>loginpage</title>
+        <link rel="stylesheet" href="{% static 'loginpage.css' %}">
+    </head>
+    <body>
+        <div class="logo">
+            <a id="h1" href="{% url 'home1' %}">sidelagau</a>
+            <a id="h2" href="{% url 'home1' %}">.com</a>
+        </div>
+<div class="boxy">
+    <div class="box1"></div>
+        <div class="box">
+            <h1 >Sign in</h1>  
+            <h2 >Let's Remove Together</h2>  
+
+            <form action="loginpage" method="POST">
+                {% csrf_token %}
+                <input id="username" type="text" name="username" placeholder="USERNAME"> 
+                <input id="password" type="password" name="password" placeholder="PASSWORD">  
+                <p>Forget password?</p>
+                <br>
+                <button class="btnSignin">Sign In</button>
+            </form>  
+            
+        </div>  
+</div>
+
+    <div class="joinnow">
+        <p>New to Sidelagau? <a href="{% url 'joinnow' %}" style="text-decoration: none; color: #0040F1;">Join now</a></p>
+    </div>
+
+    <footer> 
+        <div class="downnav">
+            <ul>
+                <a>© 2021</a>
+                <a href="#" style="text-decoration: none;">User Agreement</a>
+                <a href="#" style="text-decoration: none;">Privacy Policy</a>
+                <a href="#" style="text-decoration: none;">Copyright Policy</a>
+                <a href="#" style="text-decoration: none;">Cookies Policy</a>
+                <a href="#" style="text-decoration: none;">Community Guidelines</a>
+                <a href="{% url 'home1' %}" style="text-decoration: none; color: #0040F1;">Send Feedback</a>
+            </ul>
+        </div>
+    </footer>
+
+    </body>
+</html>

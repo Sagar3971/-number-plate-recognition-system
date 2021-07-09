@@ -1,0 +1,196 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Traffic Rules</title>
+        <link rel="stylesheet" href="{% static 'rules.css' %}">
+    </head>
+    
+    <body>
+        <div class="title">
+            <a href="{% url 'home1' %}" class="sidelagau" style="text-decoration: none;">sidelagau</a>
+            <a href="{% url 'home1' %}" class="com" style="text-decoration: none;">.com</a>
+        </div>
+        <div class="nav">
+            <span class="siding" style="font-size:30px;cursor:pointer;color: #fff;" onclick="openNav()">&#9776;</span>
+            <h1>Traffic Rules</h1>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#mans">आदेश मुलक चिन्ह</a>
+            <br>
+            <a href="#dang">चेतनामुलक चिन्ह</a>
+            <br>
+            <a href="#info">जानकारीमुलक चिन्ह</a>
+            <br>
+            <a href="#traffic">Traffic Light</a>
+        </div>
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+        <div id="mans">
+            Mandatory-Order and Regulation Sign (आदेश मुलक चिन्ह)
+        </div>
+        <div class="mandatory">
+            <a><img src="{% static 'signal/2-fill-119x130.png' %}"></a>
+            <a><img src="{% static 'signal/3-fill-110x125.png' %}"></a>
+            <a><img src="{% static 'signal/4-fill-122x106.png' %}"></a>
+            <a><img src="{% static 'signal/5-fill-124x113.png' %}"></a>
+            <a><img src="{% static 'signal/6-fill-130x105.png' %}"></a>
+            <a><img src="{% static 'signal/7-fill-106x128.png' %}"></a>
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/8-fill-103x98.png' %}"></a>
+            <a><img src="{% static 'signal/9-fill-111x121.png' %}"></a>
+            <a><img src="{% static 'signal/10-fill-118x130.png' %}"></a>
+            <a><img src="{% static 'signal/11-fill-123x113.png' %}"></a>
+            <a><img src="{% static 'signal/12-fill-127x98.png' %}"></a>
+            <a><img src="{% static 'signal/13-fill-100x130.png' %}"></a>
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/20-fill-116x130.png' %}"></a>
+            <a><img src="{% static 'signal/21-fill-110x126.png' %}"></a>
+            <a><img src="{% static 'signal/22-fill-85x69.png' %}"></a>
+            <a><img src="{% static 'signal/23-fill-119x122.png' %}"></a>
+            <a><img src="{% static 'signal/24-fill-116x98.png' %}"></a>
+            <a><img src="{% static 'signal/25-fill-124x107.png' %}"></a> 
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/26-fill-119x111.png' %}"></a>   
+            <a><img src="{% static 'signal/27-fill-110x130.png' %}"></a>
+            <a><img src="{% static 'signal/28-fill-90x130.png' %}"></a>
+            <a><img src="{% static 'signal/29-fill-118x130.png' %}"></a>
+            <a><img src="{% static 'signal/30-fill-106x130.png' %}"></a>  
+        </div>    
+       
+         <div id="dang">
+            Dangerous and Warning Signs(चेतनामुलक चिन्ह)
+         </div>
+        <div class="danger">
+            <a><img src="{% static 'signal/31.png' %}"></a>   
+            <a><img src="{% static 'signal/32.png' %}"></a>
+            <a><img src="{% static 'signal/33.png' %}"></a>
+            <a><img src="{% static 'signal/34.png' %}"></a>
+            <a><img src="{% static 'signal/35.png' %}"></a>
+            <a><img src="{% static 'signal/36.png' %}"></a> 
+            <a><img src="{% static 'signal/59.png' %}"></a> 
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/42.png' %}"></a>   
+            <a><img src="{% static 'signal/37.png' %}"></a>
+            <a><img src="{% static 'signal/38.png' %}"></a>
+            <a><img src="{% static 'signal/39.png' %}"></a>
+            <a><img src="{% static 'signal/40.png' %}"></a>
+            <a><img src="{% static 'signal/41.png' %}"></a>
+            <a><img src="{% static 'signal/56.png' %}"></a>  
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/43.png' %}"></a>   
+            <a><img src="{% static 'signal/44.png' %}"></a>
+            <a><img src="{% static 'signal/45.png' %}"></a>
+            <a><img src="{% static 'signal/46.png' %}"></a>
+            <a><img src="{% static 'signal/47.png' %}"></a>
+            <a><img src="{% static 'signal/48.png' %}"></a> 
+            <a><img src="{% static 'signal/57.png' %}"></a> 
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/49.png' %}"></a>   
+            <a><img src="{% static 'signal/50.png' %}"></a>
+            <a><img src="{% static 'signal/51.png' %}"></a>
+            <a><img src="{% static 'signal/52.png' %}"></a>
+            <a><img src="{% static 'signal/53.png' %}"></a>
+            <a><img src="{% static 'signal/54.png' %}"></a>  
+            <a><img src="{% static 'signal/58.png' %}"></a> 
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/60.png' %}"></a>   
+            <a><img src="{% static 'signal/68.png' %}"></a>
+            <a><img src="{% static 'signal/61.png' %}"></a>
+            <a><img src="{% static 'signal/62.png' %}"></a>
+            <a><img src="{% static 'signal/63.png' %}"></a>
+            <a><img src="{% static 'signal/69.png' %}"></a>  
+            <a><img src="{% static 'signal/70.png' %}"></a> 
+        </div>
+        
+        <div id="info">
+            Information Signs (जानकारीमुलक चिन्ह )        
+        </div>
+        <div class="information">
+            <a><img src="{% static 'signal/71.png' %}"></a>   
+            <a><img src="{% static 'signal/72.png' %}"></a>
+            <a><img src="{% static 'signal/73.png' %}"></a>
+            <a><img src="{% static 'signal/74.png' %}"></a>
+            <a><img src="{% static 'signal/75.png' %}"></a>
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/76.png' %}"></a>  
+            <a><img src="{% static 'signal/77.png' %}"></a> 
+            <a><img src="{% static 'signal/78.png' %}"></a>
+            <a><img src="{% static 'signal/79.png' %}"></a>
+            <a><img src="{% static 'signal/80.png' %}"></a>
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/81.png' %}"></a>  
+            <a><img src="{% static 'signal/82.png' %}"></a> 
+            <a><img src="{% static 'signal/83.png' %}"></a>
+            <a><img src="{% static 'signal/84.png' %}"></a>
+            <a><img src="{% static 'signal/85.png' %}"></a>
+            <br><br><br><br><br>
+            <a><img src="{% static 'signal/86.png' %}"></a>  
+            <a><img src="{% static 'signal/87.png' %}"></a> 
+            <a><img src="{% static 'signal/88.png' %}"></a>
+            <a><img src="{% static 'signal/89.png' %}"></a>
+            <a><img src="{% static 'signal/90.png' %}"></a>
+        </div>
+
+        <div id="traffic">
+          Traffic Lights
+        </div>
+
+    <div class="rule">
+        <h3>Red - To stop the traffic</h3> 
+        <p><i>Bring your vehicle to a complete halt behind the stop line or cross walk.
+            <br>Wait until the light turns green.</i></p>  
+
+        <h3>Amber - Caution</h3> 
+        <p><i>If your have entered the intersection and the light turns to amber, move on
+           <br>very carefully. If you see the amber light before entering the crossing,
+           <br>stop the vehicle behind the stop line or cross walk.</i></p>   
+        
+        <h3>Green - Go on</h3> 
+        <p><i>If your have entered the intersection and the light turns to amber, move on
+        <br>very carefully. If you see the amber light before entering the crossing,
+        <br>stop the vehicle behind the stop line or cross walk.</i></p>  
+        <h3>Flashing signals</h3> 
+        <p><i>A flashing red signal means you should come to a complete stop
+            <br>and move through the intersection where in it safe to do so.
+            <br><br>
+            A flashing amber signal warns to drive with caution.</i></p>  
+ 
+            <h3>Pedestrian signals</h3> 
+            <p><i>These signals help pedestrians cross intersections safely.
+                <br>If you face a steady red human figure, do not enter the road.
+                <br>If the signal starts flashing, cross the road quickly if you are
+                <br>already on the road. Stop,
+                <br>if you are about to join the road.
+                <br><br>
+                Walk cautiously if you face a steady green human figure.</i></p>                   
+    </div>
+    <div class="footer">
+        <div class="footer1">
+            <a href="useragreement.html" style="text-decoration: none; color: #fff;">User Agreement</a>
+            <a href="privacypolicy.html" style="text-decoration: none; color: #fff;">Privacy Policy</a>
+            <a href="copyrightpolicy.html" style="text-decoration: none; color: #fff;">Copyright Policy</a>
+            <a href="cookie.html" style="text-decoration: none; color: #fff;">Cookies Policy</a>
+            <a href="community.html" style="text-decoration: none; color: #fff;">Community Guidelines</a>
+            <a href="{% url 'home1' %}" style="text-decoration: none; color: #fff;">Send Feedback</a>        
+        </div>
+        <div class="footer2">
+            <p>© 2021 Plate Recognizer, a subsidiary of Sidelagau, Inc. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

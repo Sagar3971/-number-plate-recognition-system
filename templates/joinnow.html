@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Join Now</title>
+        <link rel="stylesheet" href="{% static 'joinnow.css' %}">
+    </head>
+
+    <body>
+        <div class="navigation">
+            <div class="logos">
+                <a href="{% url 'home1' %}" class="sidelagau" style="text-decoration: none;">sidelagau</a>
+                <a href="{% url 'home1' %}" class="com" style="text-decoration: none;">.com</a>
+            </div>
+            <div>
+                <button class="btnlogin" ><a href="{% url 'loginpage' %}" style="text-decoration: none; color: #fff">Login</a></button>
+            </div>
+        </div>
+
+        <div class="boxy">
+            <div class="box1"></div>
+               <div class="box">
+                    <h1 >Sign Up</h1>  
+                    <p><i>Already have an account? Then please</i> <a class="signin" href="{% url 'loginpage' %}" style="text-decoration: none;">Sign In</a></p>
+                    <form action="joinnow" method="POST">
+                        {% csrf_token %}
+                        <label>Name</label>
+                        <input id="txtname" name="name" type="text" >
+                            <br><br> 
+                        <label>Email</label>
+                        <input id="txtemail" name="email" type="email" >  
+                            <br><br>
+                        <label>Phone</label>
+                        <input id="txtphone" name="phone" type="text" >  
+                            <br><br>
+                        <label>Vehicle Number</label>
+                        <input id="txtvehicle" name="vehicle_number" type="text" placeholder="BA03PA5368">  
+                            <br><br>
+                        <label>Vehicle Type</label>
+                        <input id="txtvehicle" name="vehicle_type" type="text" placeholder="eg. Car, Bike">  
+                            <br><br>   
+                        <label>Username</label>
+                        <input id="txtvehicle" name="username" type="text" placeholder="USERNAME">  
+                            <br><br> 
+                        <label>Password</label>
+                        <input id="txtvehicle" name="password1" type="password" placeholder="PASSWORD">  
+                            <br><br> 
+                        <label>Password</label>
+                        <input id="txtvehicle" name="password2" type="password" placeholder="RE-PASSWORD"> 
+                                    {% for message in messages %}
+                                    <p style="color: rgb(238, 66, 66);"><i>{{message}}</i></p> 
+                                    {% endfor %}   
+                            <br><br>   
+                        <button class="btnNext" style="text-decoration: none; color:#fff">Submit</button>
+                    </form>
+                </div>  
+            </div>
+        </div>
+
+    <div class="footer">
+        <div class="footer1">
+            <a href="#" style="text-decoration: none; color: #fff;">User Agreement</a>
+            <a href="#" style="text-decoration: none; color: #fff;">Privacy Policy</a>
+            <a href="#" style="text-decoration: none; color: #fff;">Copyright Policy</a>
+            <a href="#" style="text-decoration: none; color: #fff;">Cookies Policy</a>
+            <a href="#" style="text-decoration: none; color: #fff;">Community Guidelines</a>
+            <a href= "{% url 'home1' %} " style="text-decoration: none; color: #fff;">Send Feedback</a>        
+        </div>
+        <div class="footer2">
+            <p>© 2021 Plate Recognizer, a subsidiary of Sidelagau, Inc. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

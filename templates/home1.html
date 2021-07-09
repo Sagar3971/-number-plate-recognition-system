@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'home1.css' %}">
+  <style>
+  .slogan{
+  font-family: 'Century Gothic';
+  font-weight: normal;
+  font-size: 28px;
+  color: #005dff;
+  text-align: center;
+  margin-top: -120px;
+  margin-left: 250px;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  border: 1px solid #005dff;
+  }
+</style>
+</head>
+
+<body>
+  <div class="navigation">
+    <div class="logo">
+      <a href="#" class="sidelagau" style="text-decoration: none;">sidelagau</a>
+      <a href="#" class="com" style="text-decoration: none;">.com</a>
+    </div>
+    
+     <ul>
+        <li><a href="{% url 'joinnow' %}">Join now</a></li>
+        <li><a href="{% url 'loginpage' %}">Sign in</a></li>
+      </ul>
+
+  </div>
+  <div class="page1" >
+      <div class="button">
+          <br>
+          <button id="scannow" onclick= "location.href='{% url 'realscan' %}'" style="text-decoration: none; color: #111;">Scan Now</button>
+          <br><br><br>
+          <button id="input" ><a href="{% url 'search' %}" style="text-decoration: none; color: #111;">Input Vechile </a></button>
+          <br><br><br>
+          <button id="learn" ><a href="{% url 'trafficrules' %}" style="text-decoration: none; color: #111;">Learn Traffic Rules</a></button>
+          <br><br><br>
+      </div>
+           
+      <div class="slogan">
+        <h2><i><br><br>Welcome to Nepal's<br> first online <br>vehicle removing site</i></h2>
+      </div>
+  </div>
+<!------------------------------------>
+  <div class="imagecontent">
+      <div class="background"></div>
+      <div style="position:absolute; color:#fff; font-size: 50px; font-family:'Century Gothic'; margin-top:250px; margin-left:400px;">Total Registered Vechile 
+      <br><br>
+      {% for message in messages %}
+      <i style="margin-left:250px">{{message}}</i>
+      {% endfor %}  
+      </div>
+      <div class="image"><img src="{% static 'signal/traffic.jpg' %}"> </div>
+  </div> 
+ <div class="about">
+    <h2 id="header">About Us</h2>
+    <span id="about1"><i>In order to ease the haphazard parking problem, mainly of the core area we have finalized to
+        develop web, which will give whole information about the owner of the vehicle along with their contact number.
+        The thing we have to do is just enter the respective registration number of the vehicle or simply scan the
+        number plate, with the help of this we can contact the owner of the vehicle and can make the area clean. This is
+        easiest and somewhat best way to solve the haphazard parking problem and clean the area when necessary.</i>
+    </span>
+  </div> 
+ <div>
+    <h1 id="header2">Contact Us</h1>
+  </div> 
+
+<form  action="Feedback" method="POST">
+      <div class="contact">
+           <div class="form">
+                {%csrf_token%}
+                <label id="name" >Name</label>
+                <input id="txtnamebox" type="text">
+                <br><br><br>
+                <label id="email" >Email</label>
+                <input id="txtemailbox" type="text">
+                <br><br><br>
+                <label id="contact" >Contact</label>
+                <input id="txtcontactbox" type="text">
+                <br><br><br><br><br>
+                <button id="submit">Submit</button>
+            </div>
+            <div class="placeholder1">
+                <textarea id="placeholder" type="text" placeholder="Message" rows="4" cols="50"></textarea>
+            </div>
+       </div> 
+</form>
+  <div class="footer">
+      <div class="footh1">
+          <h1> <a href="#header2" style="text-decoration:none; color: white;">Contact Us</a> </h1>
+      </div>
+      <div class="footh2">
+          <h1> <a href="#header" style="text-decoration:none; color: white;">About</a> </h1>
+      </div>
+      <div class="footh3">
+        <h1> <a href="#" style="text-decoration:none; color: white;">Terms & Conditions </a></h1>
+      </div>
+          <p id="ff">© 2021 Plate Recognizer, a subsidiary of Sidelagau, Inc. All rights reserved.</p>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account</title>
+        <link rel="stylesheet" href="{% static 'account.css' %}">
+    </head>
+    <body>
+        <div class="sidenav"> 
+            <a  href="#">Home</a>
+            <br>
+            <a href="#personal">Personal info</a>
+            <br>
+            <a href="#">Notification</a>
+            <br>
+            <a href="#">Logout</a>
+        </div>
+        <div class="img">
+              <img src="{% static 'signal/unnamed.gif' %}">
+              <h1>Welcome, {% user.name%}</h1>
+              <p>Manage your info, privacy, and security to make Sidelagau work better for you. Learn more</p>
+        </div>
+
+        <div class="pri">
+            <div class="pp">
+                <h1>
+                    Privacy & 
+                    personalization
+                </h1>
+                <p>
+                    <i>See the data in your Account and choose what 
+                        <br>activity is saved to personalize your experience.
+                    </i>
+                </p>
+            </div>
+            <div class="pa">
+                <h1>
+                    Privacy suggestions 
+                    available
+                </h1>
+                <p>
+                    <i>Take the Privacy Checkup and choose 
+                       <br> the settings that are right for you.
+                    </i>
+                 </p>
+              </div>
+        </div>
+        <div class="personal">
+            <h1 id="personal">Personal info</h1>
+            <p>Basic info, such as your name and photo, that you use on Sidelagau services</p>            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+body{
+    margin:0;
+    padding: 0;
+  }
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: rgba(5, 12, 96, 1);
+}  
+.logos{
+    padding-left: 90px;
+    margin-top: 27px;
+}
+.sidelagau{
+    color: #fff;
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 22px;
+}
+.com{
+    background-color: rgba(5, 12, 96, 1);
+    color: #fff;
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 22px; 
+    border: 2px solid #fff;
+    border-radius: 22px;
+    padding-right: 6px;
+    padding-bottom: 3px;
+    padding-left: 2px;
+}
+.com:hover{
+    background-color: #fff;
+    color: rgba(5, 12, 96, 1);
+}
+.btnlogin{
+    text-decoration: none;
+    background-color: rgba(5, 12, 96, 1);
+    border: solid 2px #fff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 22px;
+    width: 110px;
+    height: 30px;
+    margin-top: 22px;
+    margin-right: 50px;
+}
+.btnlogin:hover{
+    border: solid 1px #fff; 
+    font-size: 20px;
+}
+.boxy{  
+    padding-top: 50px;
+}
+.box{
+    border: solid 1px #111;
+    width: 70%;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #F5F5F5;
+    padding-bottom: 1%;
+}
+h1{
+    text-align: center;
+    font-family: "Century Gothic";
+    font-weight: bold;
+    top:0px;
+}
+p{
+    margin-left: 90px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+.signin{
+    background-color: #9F9F9F;
+    color: #fff;
+    border-radius: 4px;
+    padding-left: 3px;
+}
+.signin:hover{
+    background-color: #050C60;
+}
+label{
+    font-family: 'Dubai';
+    font-size: 24px;   
+    margin-left: 90px; 
+    padding-right: 10px;
+}
+input{
+    border: solid 1px #A8A8A8;
+    border-radius: 4px;
+    width: 50%;
+    height: 35px;
+    margin-left: 15px;
+}
+#txtname{
+    margin-left: 25px;
+}
+#txtemail{
+    margin-left: 25px;
+}
+#txtvehicle{
+    margin-left: 9px;
+
+}
+.btnNext{
+    margin-left: 70%;
+    margin-top: 10%;
+    width: 140px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(5, 12, 96, 1);
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 2px;
+}
+.btnNext:hover{
+    font-size: 23px;   
+}
+.footer{
+    margin-top: 200px;
+    background-color: #050C60;
+    height: 350px;
+}
+
+  .footer1{
+    font-family: "Century Gothic";
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    word-spacing: 3px;
+    padding-top: 160px;
+}
+.footer2{
+    font-family: "Century Gothic";
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    padding-top: 100px;
+}

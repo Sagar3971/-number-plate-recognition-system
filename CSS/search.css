@@ -1,0 +1,62 @@
+body{
+    margin:0;
+    padding: 0;  
+}
+.title{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;  
+}
+.sidelagau{
+    color: rgba(5, 12, 96, 1);
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 22px;
+    padding-left: 50px;
+}
+.com{
+    background-color: rgba(5, 12, 96, 1);
+    color: #fff;
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 22px; 
+    border: none;
+    border-radius: 22px;
+    padding-right: 6px;
+    padding-bottom: 3px;
+    padding-left: 2px;
+}
+.com:hover{
+   border: 1px solid rgba(5, 12, 96, 1);
+   background-color: #fff;
+   color: rgba(5, 12, 96, 1);
+}
+.form1{
+    border: 1px solid ;
+    background-color: rgba(5, 12, 96, 1);
+    margin: auto;
+    height: 400px;
+    width: 900px;
+    margin-top: 80px;
+    color: #fff;
+    font-family: 'Century Gothic';
+    font-size: 32px;
+    text-align: center;
+}
+#box{
+    border: 1px solid ;
+    width: 440px;
+    height: 30px;
+}
+button{
+    border-radius: 12px;
+    width: 240px;
+    height: 30px;
+    color: rgba(5, 12, 96, 1);
+}
+#msg{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 62, 49);
+    font-family: Arial, Helvetica, sans-serif;
+}
